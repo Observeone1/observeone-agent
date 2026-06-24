@@ -30,15 +30,18 @@ or `pnpm dlx @observeone/cli@latest`.
 
 ## 2. Authenticate
 
-Preferred for agents and CI: set an API key as an environment variable. The key stays
-out of the command line and the conversation.
+You need an ObserveOne API key. You cannot mint the first key yourself: if `OBS_API_KEY`
+is not already set, ask the user to create one at https://app.observeone.com/settings/api
+and provide it. Set it as an environment variable so it stays out of the command line and
+the conversation:
 
 ```bash
-export OBS_API_KEY="obs1_..." # get a key from the ObserveOne dashboard (Settings > API),
-                              # or run `obs api-key create --name "Agent"` once logged in
+export OBS_API_KEY="obs1_..."   # key from https://app.observeone.com/settings/api
 ```
 
-Alternatives:
+Once authenticated, you can mint additional keys with `obs api-key create --name "Agent"`.
+
+Other ways to authenticate:
 
 ```bash
 obs login                 # interactive, browser-based
