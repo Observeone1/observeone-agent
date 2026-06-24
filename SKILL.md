@@ -36,7 +36,7 @@ and provide it. Set it as an environment variable so it stays out of the command
 the conversation:
 
 ```bash
-export OBS_API_KEY="obs1_..."   # key from https://app.observeone.com/settings/api
+export OBS_API_KEY="obs1-api-..."   # key from https://app.observeone.com/settings/api
 ```
 
 Once authenticated, you can mint additional keys with `obs api-key create --name "Agent"`.
